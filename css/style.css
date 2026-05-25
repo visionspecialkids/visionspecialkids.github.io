@@ -319,7 +319,38 @@ a:hover { opacity: .75; }
 .resource-card h3 { color: var(--text); font-size: .97rem; margin-bottom: 8px; }
 .resource-link { color: var(--primary-dark); font-size: .82rem; }
 
+/* ── Resources — Hospitals ────────────────────────────── */
+.resources-hospitals-title {
+  color: var(--text); margin: 48px 0 24px; text-align: center;
+}
+.resources-hospitals-title::after {
+  content: ''; display: block; width: 44px; height: 3px;
+  background: var(--primary); border-radius: 2px; margin: 10px auto 0;
+}
+.resources-hospitals-grid {
+  display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px;
+}
+.hospital-card {
+  background: var(--white); border-radius: var(--radius);
+  padding: 22px; box-shadow: var(--shadow);
+  border-top: 3px solid var(--primary);
+}
+.hospital-icon { font-size: 1.5rem; margin-bottom: 10px; }
+.hospital-card h4 { color: var(--text); margin-bottom: 8px; font-size: .95rem; }
+.hospital-person { color: var(--text-light); font-size: .83rem; margin-bottom: 10px; }
+.hospital-methods { display: flex; flex-direction: column; gap: 4px; }
+.hospital-methods p { font-size: .83rem; color: var(--text-light); }
+.hospital-methods a { color: var(--primary-dark); }
+
+@media (max-width: 960px) {
+  .resources-hospitals-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 640px) {
+  .resources-hospitals-grid { grid-template-columns: 1fr; }
+}
+
 /* ── Contact ──────────────────────────────────────────── */
+.contact-single { max-width: 360px; margin: 0 auto; }
 .contact-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
