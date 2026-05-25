@@ -3,6 +3,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initHamburger()
   initActiveNav()
   initScrollReveal()
+  initCarousel()
 })
 
 function initNavbar() {
@@ -46,6 +47,37 @@ function initActiveNav() {
   }, { rootMargin: '-50% 0px -50% 0px' })
 
   sections.forEach(s => observer.observe(s))
+}
+
+function initCarousel() {
+  document.querySelectorAll('.hero-carousel').forEach(carousel => {
+    const slides = carousel.querySelectorAll('.carousel-slide')
+    const dots   = carousel.querySelectorAll('.carousel-dot')
+    const prev   = carousel.querySelector('.carousel-prev')
+    const next   = carousel.querySelector('.carousel-next')
+    let current  = 0
+    let timer    = null
+
+    function goTo(index) {
+      slides[current].classList.remove('active')
+      dots[current].classList.remove('active')
+      current = (index + slides.length) % slides.length
+      slides[current].classList.add('active')
+      dots[current].classList.add('active')
+    }
+
+    function startAuto() { timer = setInterval(() => goTo(current + 1), 4000) }
+    function resetAuto()  { clearInterval(timer); startAuto() }
+
+    prev.addEventListener('click', () => { goTo(current - 1); resetAuto() })
+    next.addEventListener('click', () => { goTo(current + 1); resetAuto() })
+    dots.forEach((dot, i) => dot.addEventListener('click', () => { goTo(i); resetAuto() }))
+
+    carousel.addEventListener('mouseenter', () => clearInterval(timer))
+    carousel.addEventListener('mouseleave', startAuto)
+
+    startAuto()
+  })
 }
 
 function initScrollReveal() {
