@@ -141,7 +141,7 @@ const TRANSLATIONS = {
     'contact.cathay': '耕莘醫院',
     'contact.csmu': '中山醫學大學附設醫院',
     'footer.gov': '衛生福利部 113–114 年度「特需兒少視覺復能計畫」',
-    'footer.rights': '© 2024–2025 特需兒少視覺復能計畫. All rights reserved.',
+    'footer.rights': '© 2026 特需兒少視覺復能計畫. All rights reserved.',
   },
 
   'en': {
@@ -286,7 +286,7 @@ const TRANSLATIONS = {
     'contact.cathay': 'Cathay General Hospital',
     'contact.csmu': 'Chung Shan Medical University Hospital',
     'footer.gov': 'Ministry of Health and Welfare 2024–2025 Visual Rehabilitation Program for Children with Special Needs',
-    'footer.rights': '© 2024–2025 Visual Rehabilitation Program for Children with Special Needs. All rights reserved.',
+    'footer.rights': '© 2026 Visual Rehabilitation Program for Children with Special Needs. All rights reserved.',
   }
 }
 
