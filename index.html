@@ -3,9 +3,418 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>測試頁</title>
+  <title data-i18n="site.title">特需兒少視覺復能計畫</title>
+  <meta name="description" content="衛生福利部特需兒少視覺復能計畫，為具特殊醫療需求的兒童及青少年提供整合性眼科醫療服務">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <h1>測試頁</h1>
+
+  <!-- ── Navbar ──────────────────────────────────────── -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#home" class="nav-logo" data-i18n="site.shortTitle">視覺復能計畫</a>
+      <ul class="nav-menu" id="navMenu">
+        <li><a href="#home"        data-i18n="nav.home">首頁</a></li>
+        <li><a href="#services"    data-i18n="nav.services">服務介紹</a></li>
+        <li><a href="#vision-rehab" data-i18n="nav.visionRehab">視覺復能</a></li>
+        <li><a href="#remote"      data-i18n="nav.remote">偏鄉離島</a></li>
+        <li><a href="#stories"     data-i18n="nav.stories">個案故事</a></li>
+        <li><a href="#resources"   data-i18n="nav.resources">資源連結</a></li>
+        <li><a href="#contact"     data-i18n="nav.contact">聯絡方式</a></li>
+      </ul>
+      <div class="nav-actions">
+        <button class="lang-btn" id="langToggle" aria-label="Switch language">
+          <span id="langLabel">EN</span>
+        </button>
+        <button class="hamburger" id="hamburger" aria-label="Menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ── Hero ───────────────────────────────────────── -->
+  <section id="home">
+    <div class="hero">
+      <div class="hero-content">
+        <p class="hero-subtitle" data-i18n="hero.gov">衛生福利部 113–114 年度</p>
+        <h1 data-i18n="hero.title">特需兒少視覺復能計畫</h1>
+        <p class="hero-desc" data-i18n="hero.desc">提供具特殊醫療需求的兒童及青少年<br>整合性的眼科醫療服務，保障其視覺健康權及平等就醫權</p>
+        <a href="#services" class="btn-primary" data-i18n="hero.cta">了解服務內容</a>
+      </div>
+      <div class="hero-image">
+        <img src="images/clinic-exam.jpg" alt="特需兒少視覺檢查" loading="eager">
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Vision ─────────────────────────────────────── -->
+  <div class="vision-banner">
+    <div class="container">
+      <h2 data-i18n="vision.title">我們的願景</h2>
+      <div class="vision-grid">
+        <div class="vision-item">
+          <div class="vision-icon">⚖️</div>
+          <h3 data-i18n="vision.equity">保障平等權利</h3>
+          <p data-i18n="vision.equity.desc">提供特需兒少平等的視覺健康服務</p>
+        </div>
+        <div class="vision-item">
+          <div class="vision-icon">♿</div>
+          <h3 data-i18n="vision.accessible">無障礙醫療服務</h3>
+          <p data-i18n="vision.accessible.desc">在無障礙環境中提供專業評估、檢查、衛教及治療</p>
+        </div>
+        <div class="vision-item">
+          <div class="vision-icon">📈</div>
+          <h3 data-i18n="vision.improve">提升功能性表現</h3>
+          <p data-i18n="vision.improve.desc">改善特需兒少的生活、學習與活動參與等功能性表現</p>
+        </div>
+        <div class="vision-item">
+          <div class="vision-icon">🏠</div>
+          <h3 data-i18n="vision.return">適應與賦歸</h3>
+          <p data-i18n="vision.return.desc">協助特需兒少適應眼科檢查流程，最終回歸一般醫療體系</p>
+        </div>
+        <div class="vision-item">
+          <div class="vision-icon">🎓</div>
+          <h3 data-i18n="vision.talent">專業人才培育</h3>
+          <p data-i18n="vision.talent.desc">培訓視覺健康領域人才，提升服務品質並保障長期發展</p>
+        </div>
+        <div class="vision-item">
+          <div class="vision-icon">💡</div>
+          <h3 data-i18n="vision.awareness">提升社會認識</h3>
+          <p data-i18n="vision.awareness.desc">增進社會大眾對特需兒少視覺健康問題的認識與關注</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── Services ───────────────────────────────────── -->
+  <section id="services" class="section">
+    <div class="container">
+      <div class="section-header">
+        <h2 data-i18n="services.title">服務介紹</h2>
+        <p data-i18n="services.subtitle">為特需兒少與家長提供雙重支持</p>
+      </div>
+
+      <div class="two-col">
+        <div class="card">
+          <h3 data-i18n="services.purpose.title">計畫目的</h3>
+          <p data-i18n="services.purpose.desc">提供具特殊醫療需求的兒童及青少年（以下簡稱特需兒少）整合性的眼科醫療服務，保障其視覺健康權及平等就醫權。</p>
+        </div>
+        <div class="card">
+          <h3 data-i18n="services.overview.title">計畫簡介</h3>
+          <p data-i18n="services.overview.desc">藉由醫療團隊提供專屬眼科檢查及視覺訓練，提升特需兒少視覺功能、學習表現與生活適應，同時減輕家長照護負擔。</p>
+        </div>
+      </div>
+
+      <div class="dual-support">
+        <h3 data-i18n="services.dual.title">本計畫提供特需兒少與家長雙重支持</h3>
+        <div class="dual-grid">
+          <div class="dual-col">
+            <h4 data-i18n="services.dual.kids">特需兒少可獲得的幫助</h4>
+            <ul>
+              <li><strong data-i18n="services.dual.kids.1.title">友善的視覺檢查：</strong><span data-i18n="services.dual.kids.1.desc">使用適合的評估方式，提升診斷準確度</span></li>
+              <li><strong data-i18n="services.dual.kids.2.title">提升視覺功能：</strong><span data-i18n="services.dual.kids.2.desc">個別化訓練與治療，改善視力、眼球控制與視覺處理能力</span></li>
+              <li><strong data-i18n="services.dual.kids.3.title">促進學習與生活適應：</strong><span data-i18n="services.dual.kids.3.desc">提升專注力、閱讀能力及日常活動表現，增強自信心</span></li>
+              <li><strong data-i18n="services.dual.kids.4.title">跨專業照護：</strong><span data-i18n="services.dual.kids.4.desc">結合眼科醫師、視光師、職能治療師等專業團隊</span></li>
+            </ul>
+          </div>
+          <div class="dual-col">
+            <h4 data-i18n="services.dual.parents">家長可獲得的幫助</h4>
+            <ul>
+              <li><strong data-i18n="services.dual.parents.1.title">專業評估與個別化建議：</strong><span data-i18n="services.dual.parents.1.desc">依特需兒少需求提供專屬視覺檢查與治療建議</span></li>
+              <li><strong data-i18n="services.dual.parents.2.title">降低兒少就醫抗拒：</strong><span data-i18n="services.dual.parents.2.desc">採用友善評估方式，減少檢查時的壓力與不適感</span></li>
+              <li><strong data-i18n="services.dual.parents.3.title">提升孩子生活品質：</strong><span data-i18n="services.dual.parents.3.desc">改善視覺功能，有助學習、專注力與日常活動</span></li>
+              <li><strong data-i18n="services.dual.parents.4.title">減輕家長負擔：</strong><span data-i18n="services.dual.parents.4.desc">提供豐富的衛教與資源，協助家長照護特需兒少的視覺健康</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="criteria-section">
+        <h3 data-i18n="services.criteria.title">哪些特需兒少適用本計畫？</h3>
+        <div class="criteria-intro">
+          <p><strong data-i18n="services.criteria.target">收案對象</strong><span data-i18n="services.criteria.target.desc">：身心障礙或發展遲緩的兒童及青少年，且無法配合一般眼科門診診療者。</span></p>
+          <p><strong data-i18n="services.criteria.rule">收案條件</strong><span data-i18n="services.criteria.rule.desc">：符合任一特殊情形及任一特定生理條件者。</span></p>
+        </div>
+        <div class="criteria-grid">
+          <div class="criteria-box">
+            <h4 data-i18n="services.criteria.special">特殊情形</h4>
+            <ol>
+              <li data-i18n="services.criteria.special.1">難以配合一般眼科檢查</li>
+              <li data-i18n="services.criteria.special.2">無法於一般眼科門診測得視覺狀況</li>
+              <li data-i18n="services.criteria.special.3">可透過跨專業團隊協助改善生活、學習及活動參與等功能性表現</li>
+            </ol>
+          </div>
+          <div class="criteria-box">
+            <h4 data-i18n="services.criteria.medical">特定生理條件</h4>
+            <ol>
+              <li data-i18n="services.criteria.medical.1">腦性麻痺、中度以上肢體障礙、心智障礙、頑固性癲癇、多重障礙（同時具有2種以上障礙）</li>
+              <li data-i18n="services.criteria.medical.2">中度以上視覺障礙</li>
+              <li data-i18n="services.criteria.medical.3">因罕見疾病而導致身心功能障礙</li>
+            </ol>
+          </div>
+        </div>
+      </div>
+
+      <div class="service-content">
+        <h3 data-i18n="services.content.title">整合性視覺復能 服務內容</h3>
+        <div class="service-quad">
+          <div class="quad-item quad-green">
+            <h4 data-i18n="services.content.team">跨專業、整合性醫療團隊</h4>
+            <ul>
+              <li data-i18n="services.content.team.1">眼科專科醫師</li>
+              <li data-i18n="services.content.team.2">職能治療師</li>
+              <li data-i18n="services.content.team.3">驗光師</li>
+            </ul>
+          </div>
+          <div class="quad-item quad-olive">
+            <h4 data-i18n="services.content.env">符合特需兒少的環境設備</h4>
+            <ul>
+              <li data-i18n="services.content.env.1">專屬門診與空間</li>
+              <li data-i18n="services.content.env.2">友善無障礙環境</li>
+              <li data-i18n="services.content.env.3">特殊設施、設備</li>
+            </ul>
+          </div>
+          <div class="quad-item quad-coral">
+            <h4 data-i18n="services.content.eval">整合性眼科評估檢查服務</h4>
+            <p data-i18n="services.content.eval.desc">因應個案特殊醫療需求及眼睛狀況（包含度數、斜視、視野等），提供檢查、聯合評估等服務</p>
+          </div>
+          <div class="quad-item quad-sand">
+            <h4 data-i18n="services.content.rehab">基礎/進階視覺復能服務</h4>
+            <p data-i18n="services.content.rehab.desc">根據評估檢查結果，提供個案增進視覺功能的治療、訓練、衛教等一對一醫療服務</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="flow-section">
+        <h3 data-i18n="services.flow.title">計畫申請與服務流程</h3>
+        <div class="flow-steps">
+          <div class="flow-step">
+            <div class="step-num">1</div>
+            <div class="step-content">
+              <h4 data-i18n="services.flow.1.title">聯絡合作醫院</h4>
+              <p data-i18n="services.flow.1.desc">填寫服務申請單，提供早療聯合評估報告、相關醫療檢查報告、身心障礙手冊等</p>
+            </div>
+          </div>
+          <div class="flow-arrow">→</div>
+          <div class="flow-step">
+            <div class="step-num">2</div>
+            <div class="step-content">
+              <h4 data-i18n="services.flow.2.title">安排專屬門診及聯合評估</h4>
+              <p data-i18n="services.flow.2.desc">符合收案條件者安排就診</p>
+            </div>
+          </div>
+          <div class="flow-arrow">→</div>
+          <div class="flow-step">
+            <div class="step-num">3</div>
+            <div class="step-content">
+              <h4 data-i18n="services.flow.3.title">執行聯合評估</h4>
+              <p data-i18n="services.flow.3.desc">並視需求安排追蹤或復能</p>
+            </div>
+          </div>
+          <div class="flow-arrow">→</div>
+          <div class="flow-step">
+            <div class="step-num">4</div>
+            <div class="step-content">
+              <h4 data-i18n="services.flow.4.title">完成追蹤、復能</h4>
+            </div>
+          </div>
+          <div class="flow-arrow">→</div>
+          <div class="flow-step">
+            <div class="step-num">5</div>
+            <div class="step-content">
+              <h4 data-i18n="services.flow.5.title">結案</h4>
+            </div>
+          </div>
+        </div>
+        <p class="flow-note" data-i18n="services.flow.note">※ 不符合收案條件者，持續在一般門診追蹤</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Visual Rehabilitation ──────────────────────── -->
+  <section id="vision-rehab" class="section section-alt">
+    <div class="container">
+      <div class="section-header">
+        <h2 data-i18n="rehab.title">視覺復能</h2>
+        <p data-i18n="rehab.subtitle">依個案的問題與需求，發展個別化代償性和矯治性復能</p>
+      </div>
+
+      <div class="card rehab-intro">
+        <h3 data-i18n="rehab.what">視覺復能是什麼？</h3>
+        <p data-i18n="rehab.what.desc">依個案的問題與需求，發展個別化代償性和矯治性復能，以成就個體或其家庭發展、學習、生活等自主性。代償性包含：輔具協助、策略學習；矯治性包含：眼球動作訓練、視覺刺激訓練、知覺學習等。</p>
+      </div>
+
+      <h3 class="rehab-programs-title" data-i18n="rehab.programs.title">視覺復能方案分享</h3>
+      <div class="rehab-grid">
+        <div class="rehab-card">
+          <div class="rehab-icon">👁️</div>
+          <h4 data-i18n="rehab.p1.title">眼球動作訓練方案</h4>
+          <p data-i18n="rehab.p1.desc">透過眼球追蹤、凝視穩定與跳視訓練，幫助孩子學會控制眼睛的動作，改善閱讀、抓握或轉頭尋找物品的能力。</p>
+        </div>
+        <div class="rehab-card">
+          <div class="rehab-icon">🔍</div>
+          <h4 data-i18n="rehab.p2.title">擁擠效應方案</h4>
+          <p data-i18n="rehab.p2.desc">為有視覺辨識困難的孩子，設計個別化的視覺復能策略，包括簡化背景、調整視覺呈現方式及知覺學習訓練。</p>
+        </div>
+        <div class="rehab-card">
+          <div class="rehab-icon">🏥</div>
+          <h4 data-i18n="rehab.p3.title">眼科情境適應方案</h4>
+          <p data-i18n="rehab.p3.desc">透過事前練習、視覺結構化指引、調整環境，協助孩子了解檢查步驟、穩定情緒，提高就診成功率。</p>
+        </div>
+        <div class="rehab-card">
+          <div class="rehab-icon">🧠</div>
+          <h4 data-i18n="rehab.p4.title">Perception Learning 方案</h4>
+          <p data-i18n="rehab.p4.desc">主要用於有基礎視覺能力但視力發展較遲緩的個案，透過尋找「Oddball」提升辨識能力，活化大腦處理視覺訊息的能力。</p>
+        </div>
+        <div class="rehab-card">
+          <div class="rehab-icon">💡</div>
+          <h4 data-i18n="rehab.p5.title">視覺刺激方案</h4>
+          <p data-i18n="rehab.p5.desc">針對腦性視覺障礙導致低視力的個案，透過高對比圖卡、燈光導引、動態色彩刺激等，逐步喚醒視覺注意力與反應能力。</p>
+        </div>
+        <div class="rehab-card">
+          <div class="rehab-icon">🏡</div>
+          <h4 data-i18n="rehab.p6.title">Little Room（視覺小屋）方案</h4>
+          <p data-i18n="rehab.p6.desc">專為重度視覺與多重障礙孩子設計的早期視覺探索空間，透過聲音、觸覺與視覺回饋，強化主動探索、促進感官整合。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Remote Areas ───────────────────────────────── -->
+  <section id="remote" class="section">
+    <div class="container">
+      <div class="section-header">
+        <h2 data-i18n="remote.title">偏鄉離島服務</h2>
+        <p data-i18n="remote.subtitle">將專業視覺醫療服務延伸至偏鄉與離島地區</p>
+      </div>
+      <div class="remote-grid">
+        <div class="remote-area">
+          <h3 data-i18n="remote.kinmen">金門</h3>
+          <div class="photo-grid">
+            <img src="images/kinmen-1.jpg" alt="金門視覺服務" loading="lazy">
+            <img src="images/kinmen-2.jpg" alt="金門縣早期療育聯合服務中心" loading="lazy">
+          </div>
+        </div>
+        <div class="remote-area">
+          <h3 data-i18n="remote.lienchiang">連江</h3>
+          <div class="photo-grid">
+            <img src="images/lienchiang-1.jpg" alt="連江視覺服務" loading="lazy">
+            <img src="images/lienchiang-2.jpg" alt="連江視覺復能訓練" loading="lazy">
+          </div>
+        </div>
+        <div class="remote-area">
+          <h3 data-i18n="remote.taitung">台東</h3>
+          <div class="photo-grid">
+            <img src="images/taitung-1.jpg" alt="台東視覺外展服務" loading="lazy">
+            <img src="images/taitung-2.jpg" alt="台東服務" loading="lazy">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Case Stories (placeholder) ───────────────── -->
+  <section id="stories" class="section section-alt">
+    <div class="container">
+      <div class="section-header">
+        <h2 data-i18n="stories.title">個案故事</h2>
+        <p data-i18n="stories.subtitle">每個孩子都有屬於自己的故事</p>
+      </div>
+      <div class="stories-placeholder">
+        <div class="placeholder-icon">📖</div>
+        <p data-i18n="stories.coming">個案故事即將上線，敬請期待</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Resources ──────────────────────────────────── -->
+  <section id="resources" class="section">
+    <div class="container">
+      <div class="section-header">
+        <h2 data-i18n="resources.title">資源連結</h2>
+        <p data-i18n="resources.subtitle">相關專業組織與計畫</p>
+      </div>
+      <div class="resources-grid">
+        <a href="https://www.tavr.org.tw/" target="_blank" rel="noopener noreferrer" class="resource-card">
+          <div class="resource-icon">🔗</div>
+          <h3 data-i18n="resources.tavr">視覺復健專業服務協會</h3>
+          <span class="resource-link">www.tavr.org.tw</span>
+        </a>
+        <a href="https://www.forblind.org.tw/" target="_blank" rel="noopener noreferrer" class="resource-card">
+          <div class="resource-icon">🔗</div>
+          <h3 data-i18n="resources.forblind">視障者家長協會</h3>
+          <span class="resource-link">www.forblind.org.tw</span>
+        </a>
+        <a href="https://healthforkids.mohw.gov.tw/CarePlan/" target="_blank" rel="noopener noreferrer" class="resource-card">
+          <div class="resource-icon">🔗</div>
+          <h3 data-i18n="resources.healthforkids">優化兒童照護計畫</h3>
+          <span class="resource-link">healthforkids.mohw.gov.tw</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Contact ────────────────────────────────────── -->
+  <section id="contact" class="section section-alt">
+    <div class="container">
+      <div class="section-header">
+        <h2 data-i18n="contact.title">聯絡方式</h2>
+        <p data-i18n="contact.subtitle">計畫合作醫院聯絡資訊</p>
+      </div>
+      <div class="contact-grid">
+        <div class="contact-card">
+          <h3 data-i18n="contact.ntuh">台大醫院</h3>
+          <p class="contact-person"><span data-i18n="contact.person">聯絡人</span>：陳虹貴、劉若萱 職能治療師</p>
+          <div class="contact-methods">
+            <p>LINE：<a href="https://line.me/R/ti/p/@ntuh.sv" target="_blank" rel="noopener">@ntuh.sv</a></p>
+            <p>Email：<a href="mailto:ntuh.specialvision@gmail.com">ntuh.specialvision@gmail.com</a></p>
+          </div>
+        </div>
+        <div class="contact-card">
+          <h3 data-i18n="contact.linkou">林口長庚紀念醫院</h3>
+          <p class="contact-person"><span data-i18n="contact.person">聯絡人</span>：蔡昀芷 職能治療師</p>
+          <div class="contact-methods">
+            <p>LINE：<a href="https://line.me/R/ti/p/@176xskrk" target="_blank" rel="noopener">@176xskrk</a></p>
+          </div>
+        </div>
+        <div class="contact-card">
+          <h3 data-i18n="contact.cmu">中國醫藥大學附設醫院</h3>
+          <p class="contact-person"><span data-i18n="contact.person">聯絡人</span>：王思涵 職能治療師</p>
+          <div class="contact-methods">
+            <p><span data-i18n="contact.phone">電話</span>：<a href="tel:0422052121">0422052121#18755</a></p>
+          </div>
+        </div>
+        <div class="contact-card">
+          <h3 data-i18n="contact.vghy">榮民總醫院員山分院</h3>
+          <p class="contact-person"><span data-i18n="contact.person">聯絡人</span>：林憶萍 個管師</p>
+          <div class="contact-methods">
+            <p>LINE：<a href="https://line.me/R/ti/p/@277eevmv" target="_blank" rel="noopener">@277eevmv</a></p>
+          </div>
+        </div>
+        <div class="contact-card">
+          <h3 data-i18n="contact.eck">恩主公醫院</h3>
+          <p class="contact-person"><span data-i18n="contact.person">聯絡人</span>：李美慧 驗光生</p>
+          <div class="contact-methods">
+            <p>Email：<a href="mailto:10178@km.eck.org.tw">10178@km.eck.org.tw</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Footer ─────────────────────────────────────── -->
+  <footer class="footer">
+    <div class="container">
+      <p data-i18n="footer.gov">衛生福利部 113–114 年度「特需兒少視覺復能計畫」</p>
+      <p data-i18n="footer.rights">© 2024–2025 特需兒少視覺復能計畫. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="js/i18n.js"></script>
+  <script src="js/main.js"></script>
 </body>
 </html>
